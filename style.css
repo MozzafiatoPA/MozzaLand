@@ -1,52 +1,94 @@
+/* ===========================
+   MOZZALAND v0.1
+=========================== */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
 
-    background:#111;
+    background:#111111;
 
-    color:white;
+    color:#ffffff;
 
     font-family:'Montserrat',sans-serif;
 
 }
 
+/* ===========================
+   HEADER
+=========================== */
+
 header{
+
+    background:#ffffff;
 
     text-align:center;
 
-    padding:50px 20px;
+    padding:40px 20px 25px;
 
 }
 
-header h1{
+.logo{
 
-    font-family:'Playfair Display',serif;
+    display:block;
 
-    font-size:3.5rem;
+    width:min(420px,80vw);
 
-    margin-bottom:10px;
+    height:auto;
+
+    margin:auto;
 
 }
 
 header p{
 
-    color:#d4af37;
+    margin-top:15px;
 
-    font-size:1.1rem;
+    color:#c59b2d;
+
+    font-size:1rem;
+
+    letter-spacing:1px;
 
 }
 
+/* ===========================
+   HERO
+=========================== */
+
 .hero{
+
+    background:#0b0b0b;
 
     text-align:center;
 
-    padding:80px 20px;
+    padding:60px 20px;
 
-    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55));
+}
+
+.hero-img{
+
+    display:block;
+
+    width:min(900px,92vw);
+
+    height:auto;
+
+    margin:auto;
+
+    margin-bottom:45px;
+
+    border-radius:20px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.45);
 
 }
 
@@ -62,15 +104,21 @@ header p{
 
 .hero p{
 
-    max-width:600px;
+    max-width:700px;
 
     margin:auto;
 
-    margin-bottom:40px;
+    margin-bottom:45px;
 
-    line-height:1.7;
+    line-height:1.8;
+
+    color:#dddddd;
 
 }
+
+/* ===========================
+   BOTÓN
+=========================== */
 
 .boton{
 
@@ -82,25 +130,29 @@ header p{
 
     text-decoration:none;
 
-    padding:18px 45px;
+    padding:18px 42px;
 
-    border-radius:50px;
+    border-radius:60px;
 
-    font-weight:bold;
+    font-weight:700;
 
     font-size:1.1rem;
 
-    transition:.3s;
+    transition:.25s;
 
 }
 
 .boton:hover{
 
-    background:white;
+    background:#ffffff;
 
-    transform:scale(1.05);
+    transform:translateY(-3px);
 
 }
+
+/* ===========================
+   CATEGORÍAS
+=========================== */
 
 .categorias{
 
@@ -108,11 +160,15 @@ header p{
 
     justify-content:center;
 
-    gap:50px;
+    align-items:center;
 
     flex-wrap:wrap;
 
-    padding:80px 20px;
+    gap:55px;
+
+    padding:70px 20px;
+
+    background:#111;
 
     text-align:center;
 
@@ -120,7 +176,13 @@ header p{
 
 .categorias div{
 
-    width:180px;
+    width:170px;
+
+}
+
+.categorias span{
+
+    font-size:3rem;
 
 }
 
@@ -128,20 +190,64 @@ header p{
 
     margin-top:15px;
 
-    font-size:1.4rem;
+    color:#d4af37;
+
+    font-size:1.3rem;
 
 }
 
+/* ===========================
+   FOOTER
+=========================== */
+
 footer{
 
-    background:#1b1b1b;
+    background:#1c1c1c;
 
     text-align:center;
 
-    padding:50px 20px;
+    padding:55px 20px;
+
+    color:#cccccc;
 
     line-height:2;
 
-    color:#ccc;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+.hero h2{
+
+    font-size:2.2rem;
+
+}
+
+.logo{
+
+    width:280px;
+
+}
+
+.hero{
+
+    padding:40px 20px;
+
+}
+
+.hero-img{
+
+    margin-bottom:30px;
+
+}
+
+.categorias{
+
+    gap:35px;
+
+}
 
 }
